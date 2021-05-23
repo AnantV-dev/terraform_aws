@@ -53,3 +53,12 @@ resource "aws_security_group" "Public" {
     Name = "allow_ssh"
   }
 }
+
+/*==== Instance ======*/
+resource "aws_instance" "server" {
+  name          = "Terraform"
+  subnet_id     = aws_subnet.tf-pub-subnet.id
+  vpc_security_group_ids  = aws_security_group.Public.id
+  ami           = "i-0063a0a0beb35acdd"
+  instance_type = "t2.micro"
+}
