@@ -70,7 +70,6 @@ resource "aws_route_table_association" "public" {
 
 /*==== Instance ======*/
 resource "aws_instance" "server" {
-  tags          = "Terraform"
   subnet_id     = aws_subnet.tf-pub-subnet.id
   vpc_security_group_ids  = aws_security_group.Public.id
   ami           = "i-0063a0a0beb35acdd"
