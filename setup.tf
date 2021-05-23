@@ -54,6 +54,20 @@ resource "aws_security_group" "Public" {
   }
 }
 
+/*==== Route Table ======*/
+
+resource "aws_route_table" "public" {
+  vpc_id = aws_vpc.vpc.id
+  tags = {
+    Name        = "Public-RT"
+  }
+}
+resource "aws_route_table_association" "public" {
+  count          = "1"
+  subnet_id      = aws_subnet.tf-pub-subnet.id
+  route_table_id = aws_route_table.public.id
+}
+
 /*==== Instance ======*/
 resource "aws_instance" "server" {
   tags          = "Terraform"
