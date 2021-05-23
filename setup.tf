@@ -30,8 +30,8 @@ resource "aws_subnet" "tf-pri-subnet" {
 }
 /*==== Security Groups ======*/
 resource "aws_security_group" "Public" {
-  name        = "allow_tls"
-  description = "Allow TLS inbound traffic"
+  name        = "allow_ssh"
+  description = "Allow SSH inbound traffic"
   vpc_id      = aws_vpc.vpc.id
 
   ingress {
