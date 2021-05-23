@@ -59,7 +59,7 @@ resource "aws_security_group" "Public" {
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name        = "Public-RT"
+    Name        = "terraform-public-RT"
   }
 }
 resource "aws_route_table_association" "public" {
