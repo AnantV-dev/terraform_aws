@@ -5,5 +5,5 @@ module "ec2" {
   #ec2_key_name = ""
   #ec2_subnet_id = ""
   #ec2_sg_ids = [""]
-  ec2_name = "Zale Ekdache"
+  ec2_name = "Terraform-EC2"
 }
