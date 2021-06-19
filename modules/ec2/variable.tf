@@ -20,7 +20,7 @@ variable "key_name" {
 
 variable "subnet_id" {
   description = "This is subnet"
-  default     = "subnet-0076cb001eb5a9f6b"
+  default     = "subnet-02454f81f45b16e54"
 }
 
 variable "sg_ids" {
